@@ -1,0 +1,184 @@
+<?php
+namespace Admin\Controller;
+use Admin\Controller\CommonController;
+use Think\Exception;
+/**
+ * 用户管理相关
+ * Created by PhpStorm.
+ * User: ASUS-
+ * Date: 2017/5/22
+ * Time: 10:01
+ */
+
+class AdminController extends CommonController{
+    public function index(){
+        $admins = D('Admin')->getAdmins();
+        $this->assign('admins',$admins);
+        $this->display();
+    }
+
+    public function add(){
+        //新增，进行保存
+        if($_POST){
+            if(!isset($_POST['username']) || !$_POST['username']){
+                return show(0,'用户名不能为空');
+            }
+            if(!isset($_POST['password']) || !$_POST['password']){
+                return show(0,'密码不能为空');
+            }
+//            $_POST['password'] = getMd5Password($_POST['password']);
+            if($_POST['password'] != $_POST['password2']){
+                return show(0,'密码不一致');
+            }
+            if(!isset($_POST['realname']) || !$_POST['realname']){
+                return show(0,'真是姓名不能为空');
+            }
+            if(!isset($_POST['phone']) || !$_POST['phone']){
+                return show(0,'联系电话不能为空');
+            }
+            if(!isset($_POST['email']) || !$_POST['email']){
+                return show(0,'电子邮箱不能为空');
+            }
+
+            $admin = D("Admin")->getAdminByUsername($_POST['username']);
+            if($admin &&  $admin['status']!=-1){
+                return show(0,'该用户已存在');
+            }
+//            print_r($_POST);
+//            die();
+            //判断完成后进行新增
+            $id = D('Admin')->insert($_POST);
+
+            if(!$id){
+                return show(0,'新增失败');
+            }
+            return show(1,'新增成功');
+        }
+        $this->display();
+    }
+    public function personal(){
+        //配置完后其实数据库里面已经更新了，所以需要重新获取一次，不然在页面在显示的还是修改前的数据
+        $res = $this->getLoginUser();
+        $user = D('Admin')->find($res['admin_id']);
+        $this->assign('vo',$user);
+        $this->display();
+    }
+    public function save(){
+        $user = $this->getLoginUser();
+        if(!$user){
+            return show(0 ,'用户不存在');
+        }
+        //接收提交过来的数据,真实姓名以及邮箱
+        $data['realname'] = $_POST['realname'];
+        $data['email'] = $_POST['email'];
+        $data['password']=$_POST['password'];
+        $data['phone'] = $_POST['phone'];
+
+        /*
+         * 作为超级管理员，可以更改其他人的信息，这里先检查一下传过来的值有没有admin_id跟自身登陆的超级管理员id是否一致
+         * 如果是，则修改自己，否则就是修改其他用户
+         */
+        $data['id'] = $_POST['admin_id'];
+        if($data['id'] != $user['admin_id']){
+            $user['admin_id'] = $data['id'];
+        }
+        //接下来我要try catch了 666
+        try{
+//            print_r($data);
+//            die();
+            $id = D('Admin')->updateByAdminId($user['admin_id'],$data);
+            /*
+             *这里有个坑，调用updateByAdminId后，里面会调用tp自带的save方法，但是在save中
+             * 配置失败返回值是false
+             * 配置内容没有更新，则是返回0
+             * 必须严格判断是否为false 即===，以及判断是否为0，即==
+             * 不错。学到东西了
+             * 区分开来，改进用户体验
+             */
+            if($id === false){
+                //返回值是false
+                return show(0,'配置失败');
+            }else if($id == false){
+                //返回值是0
+                return show(1,'配置成功，但是你并没有修改任何新数据');
+            }
+            return show(1,'配置成功');
+        }catch (Exception $e){
+            return show(0,$e->getMessage());
+        }
+    }
+    public function change(){
+        $res = $this->getLoginUser();
+        $user = D('Admin')->find($res['admin_id']);
+        $this->assign('vo',$user);
+        $this->display();
+    }
+    public function savepassword(){
+        if(!$_POST['password'] || !isset($_POST['password'])){
+            return show(0,'原密码不能为空');
+        }
+        if(!$_POST['newpassword'] || !isset($_POST['newpassword'])){
+            return show(0,'新密码不能为空');
+        }
+        if(!$_POST['newpassword2'] || !isset($_POST['newpassword2'])){
+            return show(0,'新密码不能为空');
+        }
+        if($_POST['newpassword'] != $_POST['newpassword2']){
+            return show(0,'新密码不一致');
+        }
+
+        $admin = D('Admin')->find($_POST['admin_id']);
+        //print_r($admin);
+        if($admin['password'] != $_POST['password']){
+            return show(0,'密码错误');
+        }
+        $id = $_POST['admin_id'];
+        $data['password'] = $_POST['newpassword2'];
+//        print_r($_POST);
+//        die();
+        $res = D('Admin')->updateByAdminId($id,$data);
+        if($res === false){
+            //返回值是false
+            return show(0,'修改失败');
+        }else if($res == false){
+            //返回值是0
+            return show(1,'修改成功，但是你并没有修改任何新数据');
+        }
+        return show(1,'修改成功');
+        //检验完成，进行更新
+//        $id = $_POST['admin_id'];
+
+    }
+    public function setStatus()
+    {
+        $data = array(
+            'id'=> $_POST['id'],
+            'status'=>$_POST['status'],
+        );
+        return parent::setStatus($data, 'Admin'); // TODO: Change the autogenerated stub
+    }
+    public function edit(){
+        $adminId = $_GET['id'];
+        //获取到单条记录
+        $vo = D("Admin")->find($adminId);
+        //再把数据传递给模板
+        $this->assign('vo',$vo);
+        $this->display();
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

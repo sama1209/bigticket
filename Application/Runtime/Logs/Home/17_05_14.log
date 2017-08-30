@@ -1,0 +1,9 @@
+[ 2017-05-14T23:28:25+08:00 ] ::1 /singcms/index.php?c=detail&a=view&id=23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+ERR: 无法加载控制器:Detail
+

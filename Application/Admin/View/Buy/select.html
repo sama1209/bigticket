@@ -1,0 +1,105 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper">
+
+	<include file="Index/nav"/>
+	<div id="page-wrapper">
+
+		<div class="container-fluid" >
+
+			<div class="row">
+				<div class="col-lg-12">
+
+					<ol class="breadcrumb">
+						<li>
+							<i class="fa fa-dashboard"></i>  <a href="/bigticket/admin.php?c=ticket">购票管理</a>
+						</li>
+						<li class="active">
+							<i class="fa fa-table"></i> 购票
+						</li>
+					</ol>
+				</div>
+			</div>
+
+			<div id="body" class="">
+				<div id="seat" class="lf">
+					<div class="first">
+						<b></b><span>可选座位</span>
+						<b></b><span>已售座位</span>
+						<b></b><span>已选座位</span>
+					</div>
+					<div id="" class="second">
+					</div>
+					<div id="seat_content" class="">
+						<p>1<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+						<p>2<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+						<p>3<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+						<p>4<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+						<p>5<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+						<p>6<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+						<p>7<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+						<p>8<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+						<p>9<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+					</div>
+					<br>
+					<div id="instruction" class="">
+						<p><b>使用说明：</b></p>
+						<p>1.点击上面座位直接选择</p>
+						<p>2.已售座位不能再次被选中</p>
+						<p>3.不能选择超过4张票，如有需要请进行新一轮购票</p>
+					</div>
+				</div>
+				<div id="seat_info" class="">
+					<div id="movie_info" class="">
+						<p>片名：<span id="title">
+							{$scene.title}
+						</span></p>
+						<p>日期：<span id="time">
+							{$scene.time|date="Y-m-d",###}
+						</span></p>
+						<p>时间：<span id="hour-min">
+							{$scene.time|date="H:i",###}
+						</span></p>
+					</div>
+					<div id="movie_room" class="">
+						<p>影厅：<span id="movie_room">
+							{$scene.hall}
+						</span></p>
+						<p>票价：￥<span id="price">
+							{$scene.price}
+						</span></p>
+					</div>
+					<div id="sel_seat" class="clear">
+						<br>
+						<ul>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+						</ul>
+						<br>
+					</div>
+					<div id="form" >
+						<input type="button" style="background-color:#337ab7;" id="button-book" value="确定">
+					</div>
+					<input type="hidden"  name="message" value="{$message}">
+					<input type="hidden" name="scene_id"  value="{$scene.scene_id}"/>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- /#wrapper -->
+
+	<script src="/Public/js/admin/select.js"></script>
+<script>
+    var SCOPE = {
+        'jump_url' :'/bigticket/admin.php?c=buy',
+        'edit_url' : '/bigticket/admin.php?c=buy&a=edit',
+        'add_url' : '/bigticket/admin.php?c=buy&a=add',
+        'set_url' : '/bigticket/admin.php?c=buy&a=set',
+        'sing_news_view_url' : '/bigticket/index.php?c=view',
+        'listorder_url' : '/bigticket/admin.php?c=movie&a=listorder',
+        'push_url' : '/bigticket/admin.php?c=movie&a=push',
+    }
+</script>
+<include file="Index/footer" />

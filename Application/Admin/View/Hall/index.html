@@ -1,0 +1,95 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper">
+
+  <include file="Index/nav"/>
+  <div id="page-wrapper">
+
+    <div class="container-fluid" >
+
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <ol class="breadcrumb">
+            <li>
+              <i class="fa fa-dashboard"></i>  <a href="/bigticket/admin.php?c=movie">影厅管理</a>
+            </li>
+            <li class="active">
+              <i class="fa fa-table"></i> 影厅列表
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- /.row -->
+      <div >
+        <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3></h3>
+          <!--table-responsive-->
+          <div class="">
+            <form id="singcms-listorder">
+              <table class="table table-bordered table-hover singcms-table">
+                <thead>
+                <tr>
+                <!-- 供推荐位选择 -->
+                  <th>ID</th>
+                  <th>厅号</th>
+                  <th>容量</th>
+                  <th>状态</th>
+                  <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="hall" id="hall">
+                  <tr>
+                    <td>{$hall.hall_id}</td>
+                    <td>{$hall.name}</td>
+                    <td>{$hall.hall_capacity}</td>
+                    <td><span  attr-status="<if condition="$hall['status'] eq 1">0<else/>1</if>" attr-id="{$hall.hall_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$hall.status|status}</span></td>
+                    <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$hall.hall_id}" ></span>
+                      <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$hall.hall_id}"  attr-message="删除">
+                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                      </a>
+                    </td>
+                  </tr>
+                </volist>
+
+                </tbody>
+              </table>
+              <nav>
+
+              <ul >
+                {$pageres}
+              </ul>
+
+            </nav>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+
+
+    </div>
+    <!-- /.container-fluid -->
+
+  </div>
+  <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<script>
+  var SCOPE = {
+    'jump_url' :'/bigticket/admin.php?c=hall',
+    'edit_url' : '/bigticket/admin.php?c=hall&a=edit',
+    'add_url' : '/bigticket/admin.php?c=hall&a=add',
+    'set_status_url' : '/bigticket/admin.php?c=hall&a=setStatus',
+  }
+</script>
+<include file="Index/footer" />

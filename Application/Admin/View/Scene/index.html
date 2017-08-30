@@ -1,0 +1,150 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper">
+
+  <include file="Index/nav"/>
+  <div id="page-wrapper">
+
+    <div class="container-fluid" >
+
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <ol class="breadcrumb">
+            <li>
+              <i class="fa fa-dashboard"></i>  <a href="/bigticket/admin.php?c=scene">场次管理</a>
+            </li>
+            <li class="active">
+              <i class="fa fa-table"></i> 场次列表
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- /.row -->
+      <div >
+        <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+      </div>
+      <br/>
+      <div class="row">
+        <form action="/bigticket/admin.php" method="get">
+          <input type="hidden" name="c" value="scene"/>
+          <input type="hidden" name="a" value="index"/>
+          <div class="col-md-3">
+            <div class="input-group">
+              <input class="form-control" name="title" type="text" value="{$title}" placeholder="影片名称" />
+                <span class="input-group-btn">
+                  <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                </span>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3></h3>
+          <!--table-responsive-->
+          <div class="">
+            <form id="singcms-listorder">
+              <table class="table table-bordered table-hover singcms-table">
+                <thead>
+                <tr>
+                <!-- 供推荐位选择 -->
+                  <th id="singcms-checkbox-all" width="10"><input type="checkbox"/></th>
+                  <th width="14">排序</th><!--6.7-->
+                  <th>id</th>
+                  <th>片名</th>
+                  <th>日期</th>
+                  <th>时间</th>
+                  <th>影厅</th>
+                  <th>票价</th>
+                  <th>上座率</th>
+                  <th>状态</th>
+                  <th>操作</th>
+                  <th>购票</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="scene" id="scene">
+                  <tr>
+                    <td><input type="checkbox" name="pushcheck" value="{$scene.scene_id}"></td>
+                    <td><input size=4 type='text'  name='listorder[{$new.news_id}]' value="{$new.listorder}"/></td><!--6.7-->
+                    <td>{$scene.scene_id}</td>
+                    <td>{$scene.title}</td>
+                    <td>{$scene.time|date="Y-m-d",###}</td>
+                    <td>{$scene.time|date="H:i",###}</td>
+                    <td>{$scene.hall}</td>
+                    <td>{$scene.price}</td>
+                    <td>上座率</td>
+                    <td><span  attr-status="<if condition="$scene['status'] eq 1">0<else/>1</if>" attr-id="{$scene.scene_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$scene.status|status}</span></td>
+                    <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$scene.scene_id}" ></span>
+                      <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$scene.scene_id}"  attr-message="删除">
+                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                      </a>
+                      <!--<a target="_blank" href="/bigticket/index.php?c=detail&a=view&id={$movie.movie_id}" class="sing_cursor glyphicon glyphicon-eye-open" aria-hidden="true"  ></a>-->
+                    </td>
+                     <!--只有场次日期大于当前时间的，才会有购票操作-->
+                    <td>
+                      <span <if condition="$scene['time'] gt time()">
+                               <button  id="button-buy" type="button" attr-id="{$scene.scene_id}" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">购票</button>
+                                </if>
+                      </span>
+                    </td>
+                  </tr>
+                </volist>
+
+                </tbody>
+              </table>
+              <nav>
+
+              <ul >
+                {$pageres}
+              </ul>
+
+            </nav>
+              <!--<div>-->
+                <!--<button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>-->
+              <!--</div>-->
+            </form>
+            <!--<div class="input-group">-->
+              <!--<select class="form-control" name="position_id" id="select-push">-->
+                <!--<option value="0">请选择推荐位进行推送</option>-->
+                <!---->
+                <!--<foreach name="positions" item="position">-->
+                  <!--<option value="{$position.id}">{$position.name}</option>-->
+                <!--</foreach>-->
+                <!---->
+              <!--</select>-->
+              <!--<button id="singcms-push" type="button" class="btn btn-primary">推送</button>-->
+            <!--</div>-->
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+
+
+    </div>
+    <!-- /.container-fluid -->
+
+  </div>
+  <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<script>
+  var SCOPE = {
+    'jump_url' :'/bigticket/admin.php?c=scene',
+    'edit_url' : '/bigticket/admin.php?c=scene&a=edit',
+    'add_url' : '/bigticket/admin.php?c=scene&a=add',
+      'select_url' : '/bigticket/admin.php?c=buy&a=select',
+    'set_status_url' : '/bigticket/admin.php?c=scene&a=setStatus',
+    'sing_news_view_url' : '/bigticket/index.php?c=view',
+    'listorder_url' : '/bigticket/admin.php?c=movie&a=listorder',
+    'push_url' : '/bigticket/admin.php?c=movie&a=push',
+  }
+</script>
+<include file="Index/footer" />

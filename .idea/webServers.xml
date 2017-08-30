@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a4fd17b5-9e8d-49a8-99e8-b00949db5e39" name="localhost" url="http://localhost/bigticket">
+        <fileTransfer port="0" mountedRoot="F:\wamp\www\bigticket" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

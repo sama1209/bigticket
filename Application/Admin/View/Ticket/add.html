@@ -1,0 +1,167 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper">
+
+  <include file="Index/nav"/>
+  <script src="/Public/js/kindeditor/kindeditor-all.js"></script>
+  <div id="page-wrapper">
+
+    <div class="container-fluid">
+
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <ol class="breadcrumb">
+            <li>
+              <i class="fa fa-dashboard"></i>  <a href="/bigticket/admin.php?c=content">购票管理</a>
+            </li>
+            <li class="active">
+              <i class="fa fa-edit"></i> 购票
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <div class="col-lg-6">
+
+          <form class="form-horizontal" id="singcms-form">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">影片:</label>
+              <div class="col-sm-5">
+                <select class="form-control" id="scene" name="scene">
+                  <option value="">==请选择影片==</option>
+                  <foreach name="scene" item="sceneMenu">
+                    <option value="{$sceneMenu}">{$sceneMenu.title}</option>
+                  </foreach>
+                </select>
+
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">年:</label>
+              <div class="col-sm-5">
+                <select class="form-control"  name="year">
+                  <option value="">==请选择年==</option>
+                  <foreach name="year" item="yearMenu">
+                    <option value="{$yearMenu}">{$yearMenu}</option>
+                  </foreach>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputcountry" class="col-sm-2 control-label">月:</label>
+              <div class="col-sm-5">
+                <select class="form-control"  name="month">
+                  <option value="">==请选择月==</option>
+                  <foreach name="month" item="monthMenu">
+                    <option value="{$monthMenu}">{$monthMenu}</option>
+                  </foreach>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputcountry" class="col-sm-2 control-label">日:</label>
+              <div class="col-sm-5">
+                <select class="form-control"  name="date">
+                  <option value="">==请选择日==</option>
+                  <foreach name="date" item="dateMenu">
+                    <option value="{$dateMenu}">{$dateMenu}</option>
+                  </foreach>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputcountry" class="col-sm-2 control-label">时:</label>
+              <div class="col-sm-5">
+                <select class="form-control"  name="hour">
+                  <option value="">==请选择具体时间==</option>
+                  <foreach name="hour" item="hourMenu">
+                    <option value="{$hourMenu}">{$hourMenu}</option>
+                  </foreach>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputcountry" class="col-sm-2 control-label">分:</label>
+              <div class="col-sm-5">
+                <select class="form-control"  name="minute">
+                  <option value="">==请选择具体时间==</option>
+                  <foreach name="minute" item="minuteMenu">
+                    <option value="{$minuteMenu}">{$minuteMenu}</option>
+                  </foreach>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputdirector" class="col-sm-2 control-label">影厅:</label>
+              <div class="col-sm-5">
+                <select class="form-control" id="hall_id" name="hall">
+                  <option value="">==请选择影厅==</option>
+                  <foreach name="hall" item="hallMenu" >
+                    <option value="{$hallMenu.name}">{$hallMenu.name}</option>
+                  </foreach>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputdirector" class="col-sm-2 control-label">票价:</label>
+              <div class="col-sm-5">
+                <input type="text" name="price" class="form-control" id="inputcountry" placeholder="请填写票价">
+              </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
+              </div>
+            </div>
+          </form>
+
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container-fluid -->
+
+  </div>
+  <!-- /#page-wrapper -->
+
+</div>
+<script>
+  var SCOPE = {
+    'save_url' : '/bigticket/admin.php?c=ticket&a=add',
+    'jump_url' : '/bigticket/admin.php?c=ticket',
+    'ajax_upload_image_url' : '/bigticket/admin.php?c=image&a=ajaxuploadimage',
+    'ajax_upload_swf' : '/Public/js/party/uploadify.swf',
+  };
+
+</script>
+<!-- /#wrapper -->
+<script src="/Public/js/admin/image.js"></script>
+<script>
+  // 6.2
+  KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_singcms',{
+      uploadJson : '/bigticket/admin.php?c=image&a=kindupload',
+      afterBlur : function(){this.sync();}, //
+    });
+  });
+</script>
+<include file="Index/footer" />

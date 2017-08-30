@@ -1,0 +1,103 @@
+#sortList{
+	width:100%;
+	height:70px;
+	background-color:#222;
+}
+#sortList ul{
+	padding-left:404.5px;
+	width:100%
+}
+#sortList ul li{
+	position:relative;
+	float:left;
+	width:13.343217%;
+	text-align:center;
+	height:70px;
+	line-height:70px;
+	font-size:20px;
+}
+#sortList ul li:hover{
+	color:#32a333;
+	cursor:pointer;
+}
+#sortList ul li span{
+	position:absolute;
+	border:10px solid #222;
+	border-bottom-color:#fff;
+	bottom:0;
+	left:80px;
+	display:none;
+}
+#sortList ul li.active{
+	color:#32a333;
+}
+#sortList ul li.active span{
+	display:block;
+}
+
+/*热映口碑榜*/
+div.public{
+	display:none;
+}
+#hotContent{display:block;}
+div.public ul{width:800px;margin: 30px auto;}
+div.public ul li{margin-bottom:20px;}
+div.public ul li div{
+	position:relative;
+	width:540px;
+	height:218px;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+}
+div.public ul li div p:first-child{margin:50px 0 10px 5px;}
+div.public ul li div p:first-child a{
+	text-decoration:none;
+	color:#333;
+	font-size:23px;
+}
+div.public ul li div p:not(:first-child),div.public ul li div p:not(:first-child) span{
+	color:#666;
+	font-size:18px;
+	margin:8px 0;
+}
+div.public ul li div>span{
+	position:absolute;
+	top:90px;
+	right:20px;
+	color:#fc0;
+	font-size:35px;
+	font-style:italic;
+}
+div#expectedContent ul li div>span{
+	font-size:21px;
+	color:#e4393c;
+}
+div#ticketNumContent ul li div>span{
+	font-size:23px;
+	color:#e4393c;
+	font-weight:bold;
+}
+div.public ul li>span{
+	display:inline-block;
+	width:50px;height:50px;
+	position:relative;
+	top:-85px;
+	background-color:#eee;
+	color:#bbb;
+	line-height:50px;
+	text-align:center;
+	font-size:18px;
+}
+div.public ul li:first-child>span{
+	background-image:url(../Image/list/topLogo.jpg);
+}
+div.public ul li:nth-child(2)>span,div.public ul li:nth-child(3)>span{
+	background-color:#fc0;
+	color:#fff;font-weight:bold;
+}
+div.public ul li>a{
+	margin-left:25px;
+	display:inline-block;
+	width:160px;
+	height:220px;
+}

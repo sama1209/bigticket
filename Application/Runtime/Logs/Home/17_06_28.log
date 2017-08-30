@@ -1,0 +1,52 @@
+[ 2017-06-28T22:48:51+08:00 ] ::1 /bigticket/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() F:\wamp\wamp\www\bigticket\Application\Home\Controller\CommonController.class.php 第 25 行.
+ERR: 1146:Table 'bbt.news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `news`
+ERR: 1146:Table 'bbt.news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `news`
+
+[ 2017-06-28T22:48:51+08:00 ] ::1 /bigticket/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() F:\wamp\wamp\www\bigticket\Application\Home\Controller\CommonController.class.php 第 25 行.
+ERR: 1146:Table 'bbt.news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `news`
+ERR: 1146:Table 'bbt.news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `news`
+
+[ 2017-06-28T23:07:43+08:00 ] ::1 /bigticket/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() F:\wamp\wamp\www\bigticket\Application\Home\Controller\CommonController.class.php 第 25 行.
+ERR: 1146:Table 'bbt.news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `news`
+ERR: 1146:Table 'bbt.news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `news`
+
+[ 2017-06-28T23:07:43+08:00 ] ::1 /bigticket/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() F:\wamp\wamp\www\bigticket\Application\Home\Controller\CommonController.class.php 第 25 行.
+ERR: 1146:Table 'bbt.news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `news`
+ERR: 1146:Table 'bbt.news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `news`
+

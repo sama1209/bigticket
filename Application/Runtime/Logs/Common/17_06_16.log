@@ -1,0 +1,42 @@
+[ 2017-06-16T17:54:12+08:00 ] ::1 /singcms/bigticket/Public/js/party/uploadify.swf?preventswfcaching=1497606851073
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.076938s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-06-16T22:38:07+08:00 ] ::1 /singcms/bigticket/Public/js/party/uploadify.swf?preventswfcaching=1497623887304
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001220s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-06-16T22:38:07+08:00 ] ::1 /singcms/bigticket/Public/js/party/uploadify.swf?preventswfcaching=1497623887304
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-06-16T22:40:07+08:00 ] ::1 /singcms/bigticket/Public/js/party/uploadify.swf?preventswfcaching=1497624007148
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-06-16T22:40:07+08:00 ] ::1 /singcms/bigticket/Public/js/party/uploadify.swf?preventswfcaching=1497624007148
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-06-16T22:49:37+08:00 ] ::1 /singcms/bigticket/Public/js/party/uploadify.swf?preventswfcaching=1497624577248
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-06-16T22:49:37+08:00 ] ::1 /singcms/bigticket/Public/js/party/uploadify.swf?preventswfcaching=1497624577248
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001639s ]
+ERR: 无法加载模块:Bigticket
+

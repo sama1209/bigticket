@@ -1,0 +1,54 @@
+[ 2017-08-05T14:31:53+08:00 ] ::1 /bigticket/admin.php/login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+ERR: 无法加载模块:Login
+
+[ 2017-08-05T14:46:48+08:00 ] ::1 /bigticket/admin.php/bigticket/admin.php/m/admin/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-08-05T14:46:52+08:00 ] ::1 /bigticket/admin.php/bigticket/admin.php/m/admin/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-08-05T14:46:53+08:00 ] ::1 /bigticket/admin.php/bigticket/admin.php/m/admin/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-08-05T14:46:53+08:00 ] ::1 /bigticket/admin.php/bigticket/admin.php/m/admin/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-08-05T14:46:53+08:00 ] ::1 /bigticket/admin.php/bigticket/admin.php/m/admin/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-08-05T14:46:54+08:00 ] ::1 /bigticket/admin.php/bigticket/admin.php/m/admin/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-08-05T14:46:54+08:00 ] ::1 /bigticket/admin.php/bigticket/admin.php/m/admin/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+ERR: 无法加载模块:Bigticket
+
+[ 2017-08-05T14:47:04+08:00 ] ::1 /bigticket/admin.php/bigticket/admin.php/m/admin/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+ERR: 无法加载模块:Bigticket
+

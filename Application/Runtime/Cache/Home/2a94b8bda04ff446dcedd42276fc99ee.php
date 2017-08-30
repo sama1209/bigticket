@@ -1,0 +1,254 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>巨票儿</title>
+  <link rel="stylesheet" href="/bigticket/Public/css/home/public.css ">
+  <link rel="stylesheet" href="/bigticket/Public/css/home/index.css">
+ </head>
+ <body>
+	<!-- 头部 -->
+	<header class="clear">
+		<a href="index.html">
+			<img src="/bigticket/Public/css/img/index/logo.jpg" width="46" height="46" border="0" alt="巨票儿">
+			巨票儿
+		</a>
+		<div class="lf nav">
+			<ul>
+				<li><a href="/bigticket/index.php?m=home&c=index&a=index" class="active">首页</a></li>
+				<li><a href="/bigticket/index.php?m=home&c=movies&a=index">电影</a></li>
+				<li><a href="/bigticket/index.php?m=home&c=list&a=index">榜单</a></li>
+				<li><a href="/bigticket/index.php?m=home&c=list&a=index">预告</a></li>
+			</ul>
+		</div>
+		<form class="search-form lf" target="_blank">
+			<input class="search" name="seek" type="search" placeholder="按电影名搜索"></input>
+			<input class="submit" type="submit" value="" target="_blank"></input>
+		</form>
+		<div class="rt login">
+			<img src="/bigticket/Public/css/img/index/login.png" width="40px" height="40px" border="0" alt="">
+			<b></b>
+			<div>
+				<a href="register.html">注册</a>
+				<a href="login.html">登录</a>
+			</div>
+		</div>
+	</header>
+	<!-- 轮播图 -->
+	<!--<a href="" style="background-image:url($big['photo_big'])"></a>-->
+	<div id="scroll">
+		<ul id="pic">
+			<?php if(is_array($bigMovie)): $i = 0; $__LIST__ = $bigMovie;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$bigMovie): $mod = ($i % 2 );++$i;?><li><a href="" style="background: url(<?php echo (getBigUrl($bigMovie["movie_id"])); ?>)" style="width: 1349px;height: 450px;"></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+		</ul>
+		<ol id="list">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+	</div>
+	<div id="movieShow" class="lf">
+		<!-- 正在热映 -->
+		<div id="hot_showing" class="showing">
+			<a href="movies.html">全部></a>
+			<p>正在热映</p>
+			<ul>
+				<?php if(is_array($sellingMovie)): $i = 0; $__LIST__ = $sellingMovie;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sellingMovie): $mod = ($i % 2 );++$i;?><li>
+					<a href="details.html" >
+						<img style="width: 160px; height:220px;" src="<?php echo (getSmallUrl($sellingMovie["movie_id"])); ?>" alt="">
+						<span></span>
+						<div>
+							<b><?php echo (getMoviegradeById($sellingMovie["movie_id"])); ?></b>
+							<p><?php echo (getMovieTitleById($sellingMovie["movie_id"])); ?></p>
+						</div>
+					</a>
+					<a href="">购票</a>
+					</li><?php endforeach; endif; else: echo "" ;endif; ?>
+
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<!-- 即将上映 -->
+		<div id="coming_showing" class="showing ">
+			<a href="movies.html">全部></a>
+			<p>即将上映</p>
+			<ul>
+			<?php if(is_array($will)): $i = 0; $__LIST__ = $will;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$will): $mod = ($i % 2 );++$i;?><li>
+					<a href="details.html">
+						<img style="width: 160px; height:220px;" src="<?php echo (getSmallUrl($will["movie_id"])); ?>" alt="">
+						<span></span>
+						<div>
+							<p><?php echo (getMovieTitleById($will["movie_id"])); ?></p>
+						</div>
+					</a>
+					<div><?php echo ($will["movie_id"]); echo ($will["position_id"]); echo ($will["id"]); ?>人相看</div>
+					<div>
+						<a href="">预告片</a>
+						<a href="">预售</a>
+					</div>
+					<div><?php echo (getDateById($will["movie_id"])); ?>上映</div>
+				</li><?php endforeach; endif; else: echo "" ;endif; ?>
+		   </ul>
+		</div>
+		<div id="hot_showing" class="showing">
+			<a href="movies.html">全部></a>
+			<p>往期精彩</p>
+			<ul>
+				<?php if(is_array($pass)): $i = 0; $__LIST__ = $pass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pass): $mod = ($i % 2 );++$i;?><li>
+						<a href="details.html" >
+							<img style="width: 160px; height:220px;" src="<?php echo (getSmallUrl($pass["movie_id"])); ?>" alt="">
+							<span></span>
+							<div>
+								<b><?php echo (getMoviegradeById($pass["movie_id"])); ?></b>
+								<p><?php echo (getMovieTitleById($pass["movie_id"])); ?></p>
+							</div>
+						</a>
+						<a href="">查看</a>
+					</li><?php endforeach; endif; else: echo "" ;endif; ?>
+
+			</ul>
+		</div>
+	</div>
+	<div id="listShow" class="lf">
+		<!-- 今日票房 -->
+		<div id="ticketNum" class="">
+			<p class="ticketNum">今日票房</p>
+			<ul>
+				<li>
+					<a href="detail_movie.html" id="No1">
+						<!-- top图标 -->
+						<b></b>
+						<div id="" class="rt">
+							<p id="No1Name">银河护卫队</p>
+							<p id="No1ticketNum"><span class="">3.2</span>亿</p>
+						</div>
+						<img src="/bigticket/Public/css/img/index/银河护卫队.jpg" width="100px" height="137px" border="0" alt="" id="No1Img">
+
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No2">
+						<p><i>4121.2</i> 万</p><b>2</b><span id="No2Name">摔跤吧！爸爸</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No3">
+						<p><i>4121.2</i> 万</p><b>3</b><span id="No3Name">拆弹专家</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No4">
+						<p><i>4121.2</i> 万</p><b>4</b><span id="No4Name">春娇救志明</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No5">
+						<p><i>4121.2</i> 万</p><b>5</b><span id="No5Name">超凡战队</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No6">
+						<p><i>4121.2</i> 万</p><b>6</b><span id="No6Name">毒诫</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No7">
+						<p><i>4121.2</i> 万</p><b>7</b><span id="No7Name">雄狮</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No8">
+						<p><i>4121.2</i> 万</p><b>8</b><span id="No8Name">新木乃伊</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No9">
+						<p><i>4121.2</i> 万</p><b>9</b><span id="No9Name">忠爱无言</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="No10">
+						<p><i>4121.2</i> 万</p><b>10</b><span id="No10Name">重返·狼群</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 最受期待 -->
+		<div id="expect" class="">
+			<div id="" class="expect">
+				<a href="list.html" class="rt">查看完整榜单 ></a><p class="">最受期待</p>
+			</div>
+			<ul>
+				<li id="one">
+					<a href="detail_movie.html">
+						<b>1</b>
+						<div id="" class="rt">
+							<p id="firstName">摔跤吧！爸爸</p>
+							<p id="showTime">上映日期：<b class="time">2017-05-23</b></p>
+							<p><span class="expectNum">564613</span>人想看</p>
+						</div>
+						<img src="/bigticket/Public/css/img/index/摔跤吧！爸爸.jpg" width="130px" height="178px" border="0" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="two">
+						<p><i>99999</i> 人想看</p><b>2</b><span id="">悟空传</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="three">
+						<p><i>88888</i> 人想看</p><b>3</b><span id="">三生三世十里桃花</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="four">
+						<p><i>77777</i> 人想看</p><b>4</b><span id="">妖猫传</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="five">
+						<p><i>66666</i> 人想看</p><b>5</b><span id="">捉妖记2</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="six">
+						<p><i>55555</i> 人想看</p><b>6</b><span id="">英伦对决</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="seven">
+						<p><i>44444</i> 人想看</p><b>7</b><span id="">机器之血</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="eight">
+						<p><i>33333</i> 人想看</p><b>8</b><span id="">芳华</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="nine">
+						<p><i>22222</i> 人想看</p><b>9</b><span id="">西游记之女儿国</span>
+					</a>
+				</li>
+				<li>
+					<a href="detail_movie.html" id="ten">
+						<p><i>11111</i> 人想看</p><b>10</b><span id="">敦刻尔克</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 去掉浮动的影响 -->
+	<div id="" class="clear"></div>
+	<!-- 尾部 -->
+	<footer>
+		<div>友情链接：<a href="http://www.dytt8.net/">电影天堂</a></div>
+		<p>&copy;2017 巨票儿电影&nbsp;&nbsp;制作团队：罗利泰&nbsp;何晓畅&nbsp;刘念祖&nbsp;陈文婷</p>
+		<p>Technology:HTML/CSS/JavaScript/PHP/MySql</p>
+	</footer>
+	<script src="/bigticket/Public/js/home/index.js"></script>
+	<script src="/bigticket/Public/js/home/jquery.js"></script>
+	<script src="/bigticket/Public/js/home/public.js"></script>
+ </body>
+</html>

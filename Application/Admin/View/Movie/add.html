@@ -1,0 +1,160 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper">
+
+  <include file="Index/nav"/>
+  <script src="/Public/js/kindeditor/kindeditor-all.js"></script>
+  <div id="page-wrapper">
+
+    <div class="container-fluid">
+
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <ol class="breadcrumb">
+            <li>
+              <i class="fa fa-dashboard"></i>  <a href="/bigticket/admin.php?c=movie">影片管理</a>
+            </li>
+            <li class="active">
+              <i class="fa fa-edit"></i> 影片添加
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <div class="col-lg-6">
+
+          <form class="form-horizontal" id="singcms-form">
+            <div class="form-group">
+              <label for="inputname" class="col-sm-2 control-label">片名:</label>
+              <div class="col-sm-5">
+                <input type="text" name="title" class="form-control" id="inputname" placeholder="请填写片名">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputcountry" class="col-sm-2 control-label">所属国家:</label>
+              <div class="col-sm-5">
+                <input type="text" name="country" class="form-control" id="inputcountry" placeholder="请填写国家">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputdirector" class="col-sm-2 control-label">导演:</label>
+              <div class="col-sm-5">
+                <input type="text" name="director" class="form-control" id="inputdirector" placeholder="请填写导演">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputlength" class="col-sm-2 control-label">片长:</label>
+              <div class="col-sm-5">
+                <input type="text" name="length" class="form-control" id="inputlength" placeholder="请填写片长">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputmainactor" class="col-sm-2 control-label">主演:</label>
+              <div class="col-sm-5">
+                <input type="text" name="mainactor" class="form-control" id="inputmainactor" placeholder="多个请用空格隔开">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputtype" class="col-sm-2 control-label">影片类型:</label>
+              <div class="col-sm-5">
+                <input type="text" name="type" class="form-control" id="inputtype" placeholder="多个请用空格隔开">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputdate" class="col-sm-2 control-label">上映日期:</label>
+              <div class="col-sm-5">
+                <input type="text" name="date" class="form-control" id="inputdate" placeholder="年 - 月 - 日">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputgrade" class="col-sm-2 control-label">影片评分</label>
+              <div class="col-sm-5">
+                <input type="text" name="grade" class="form-control" id="inputgrade" placeholder="请填写评分，若未上映则为10">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="file_upload" class="col-sm-2 control-label">横幅海报:</label>
+              <div class="col-sm-5">
+                <input id="file_upload"  type="file" multiple="true" >
+                <img style="display: none" id="upload_org_code_img" src="" width="300" height="150">
+                <input id="file_upload_image" name="photo_big" type="hidden" multiple="true" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="file_upload_small" class="col-sm-2 control-label">竖幅小图:</label>
+              <div class="col-sm-5">
+                <input id="file_upload_small"  type="file" multiple="true" >
+                <img style="display: none" id="upload_org_code_img_small" src="" width="150" height="200">
+                <input id="file_upload_image_small" name="photo_small" type="hidden" multiple="true" value="">
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <!--for属性，先留着不知道后面会不会用得着-->
+              <label for="editor_singcms"  class="col-sm-2 control-label">内容简介:</label>
+              <div class="col-sm-5">
+                <textarea class="input js-editor" id="editor_singcms" name="content" rows="20" ></textarea>
+              </div>
+            </div>
+            <!--<div class="form-group">-->
+              <!--<label for="inputPassword3" class="col-sm-2 control-label">描述:</label>-->
+              <!--<div class="col-sm-9">-->
+                <!--<input type="text" class="form-control" name="description" id="inputPassword3" placeholder="描述">-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+              <!--<label for="inputPassword3" class="col-sm-2 control-label">关键字:</label>-->
+              <!--<div class="col-sm-5">-->
+                <!--<input type="text" class="form-control" name="keywords" id="inputPassword3" placeholder="请填写关键词">-->
+              <!--</div>-->
+            <!--</div>-->
+
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
+              </div>
+            </div>
+          </form>
+
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container-fluid -->
+
+  </div>
+  <!-- /#page-wrapper -->
+
+</div>
+<script>
+  var SCOPE = {
+    'save_url' : '/bigticket/admin.php?c=movie&a=add',
+    'jump_url' : '/bigticket/admin.php?c=movie',
+    'ajax_upload_image_url' : '/bigticket/admin.php?c=image&a=ajaxuploadimage',
+    'ajax_upload_swf' : '/Public/js/party/uploadify.swf',
+  };
+
+</script>
+<!-- /#wrapper -->
+<script src="/Public/js/admin/image.js"></script>
+<script>
+  // 6.2
+  KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_singcms',{
+      uploadJson : '/bigticket/admin.php?c=image&a=kindupload',
+      afterBlur : function(){this.sync();}, //
+    });
+  });
+</script>
+<include file="Index/footer" />

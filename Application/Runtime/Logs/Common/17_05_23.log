@@ -1,0 +1,36 @@
+[ 2017-05-23T09:32:58+08:00 ] ::1 /singcms/singcms/Public/js/party/uploadify.swf?preventswfcaching=1495503177881
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+ERR: 无法加载模块:Singcms
+
+[ 2017-05-23T09:32:58+08:00 ] ::1 /singcms/singcms/Public/js/party/uploadify.swf?preventswfcaching=1495503177881
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+ERR: 无法加载模块:Singcms
+
+[ 2017-05-23T11:21:21+08:00 ] ::1 /singcms/singcms/Public/js/party/uploadify.swf?preventswfcaching=1495509681706
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+ERR: 无法加载模块:Singcms
+
+[ 2017-05-23T11:21:21+08:00 ] ::1 /singcms/singcms/Public/js/party/uploadify.swf?preventswfcaching=1495509681706
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+ERR: 无法加载模块:Singcms
+
+[ 2017-05-23T13:48:24+08:00 ] ::1 /singcms/singcms/Public/js/party/uploadify.swf?preventswfcaching=1495518504048
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+ERR: 无法加载模块:Singcms
+
+[ 2017-05-23T13:48:24+08:00 ] ::1 /singcms/singcms/Public/js/party/uploadify.swf?preventswfcaching=1495518504048
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+ERR: 无法加载模块:Singcms
+

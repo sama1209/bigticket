@@ -1,0 +1,683 @@
+[ 2017-05-13T15:04:04+08:00 ] ::1 /singcms/index.php?m=admin&c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037729s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000982s ]
+
+[ 2017-05-13T15:04:09+08:00 ] ::1 /singcms/index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0681s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-05-13T15:04:10+08:00 ] ::1 /singcms/index.php?m=admin&c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0365s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: admincount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 114 行.
+NOTIC: [8] Undefined variable: newscount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 136 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 158 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 163 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 167 行.
+NOTIC: [8] Undefined variable: positioncount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 180 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.102306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001060s ]
+
+[ 2017-05-13T15:04:13+08:00 ] ::1 /singcms/admin.php?c=content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 113 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 150 行.
+NOTIC: [8] Undefined variable: pageres D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 176 行.
+NOTIC: [8] Undefined variable: positions D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2017-05-13T15:04:15+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: titleFontColor D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 134 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 143 行.
+NOTIC: [8] Undefined variable: copyfrom D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 152 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034172s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034274s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+
+[ 2017-05-13T15:04:27+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: titleFontColor D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 134 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 143 行.
+NOTIC: [8] Undefined variable: copyfrom D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 152 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035880s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000949s ]
+
+[ 2017-05-13T15:04:43+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: titleFontColor D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 134 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 143 行.
+NOTIC: [8] Undefined variable: copyfrom D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 152 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039608s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000794s ]
+
+[ 2017-05-13T15:04:55+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000406s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: titleFontColor D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 134 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 143 行.
+NOTIC: [8] Undefined variable: copyfrom D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 152 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001155s ]
+
+[ 2017-05-13T15:05:00+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001257s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: titleFontColor D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 134 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 143 行.
+NOTIC: [8] Undefined variable: copyfrom D:\demo\singcms\Application\Runtime\Cache\Admin\e2744aea2724da3a85f9df759ede898a.php 第 152 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2017-05-13T15:05:01+08:00 ] ::1 /singcms/index.php?m=admin&c=login&a=loginout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+NOTIC: [8] Undefined variable: module D:\demo\singcms\ThinkPHP\Common\functions.php 第 990 行.
+NOTIC: [8] Undefined variable: var D:\demo\singcms\ThinkPHP\Common\functions.php 第 990 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\demo\singcms\ThinkPHP\Common\functions.php 第 990 行.
+NOTIC: [2] http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given D:\demo\singcms\ThinkPHP\Common\functions.php 第 990 行.
+
+[ 2017-05-13T15:05:01+08:00 ] ::1 /singcms/index.php?m=&&m=admin&c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005116s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-05-13T15:05:07+08:00 ] ::1 /singcms/index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0164s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-05-13T15:05:13+08:00 ] ::1 /singcms/index.php?m=admin&c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: admincount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 114 行.
+NOTIC: [8] Undefined variable: newscount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 136 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 158 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 163 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 167 行.
+NOTIC: [8] Undefined variable: positioncount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 180 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2017-05-13T15:07:30+08:00 ] ::1 /singcms/admin.php?c=content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 113 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 150 行.
+NOTIC: [8] Undefined variable: pageres D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 176 行.
+NOTIC: [8] Undefined variable: positions D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2017-05-13T15:07:32+08:00 ] ::1 /singcms/admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\demo\singcms\Application\Admin\Controller\MenuController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') D:\demo\singcms\Application\Admin\Controller\MenuController.class.php 第 8 行.
+NOTIC: [8] Undefined index: p D:\demo\singcms\Application\Admin\Controller\MenuController.class.php 第 61 行.
+NOTIC: [8] Undefined index: pageSize D:\demo\singcms\Application\Admin\Controller\MenuController.class.php 第 62 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0425s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: nav D:\demo\singcms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2017-05-13T15:07:33+08:00 ] ::1 /singcms/admin.php?c=menu&a=listorder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\demo\singcms\Application\Admin\Controller\MenuController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') D:\demo\singcms\Application\Admin\Controller\MenuController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: UPDATE `cms_menu` SET `listorder`='90' WHERE ( menu_id=6 ) [ RunTime:0.0005s ]
+SQL: UPDATE `cms_menu` SET `listorder`='15' WHERE ( menu_id=10 ) [ RunTime:0.0005s ]
+SQL: UPDATE `cms_menu` SET `listorder`='10' WHERE ( menu_id=1 ) [ RunTime:0.0004s ]
+
+[ 2017-05-13T15:07:40+08:00 ] ::1 /singcms/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: admincount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 114 行.
+NOTIC: [8] Undefined variable: newscount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 136 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 158 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 163 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 167 行.
+NOTIC: [8] Undefined variable: positioncount D:\demo\singcms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 180 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033252s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2017-05-13T15:07:49+08:00 ] ::1 /singcms/admin.php?c=content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000837s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001210s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0186s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 113 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 150 行.
+NOTIC: [8] Undefined variable: pageres D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 176 行.
+NOTIC: [8] Undefined variable: positions D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2017-05-13T15:36:33+08:00 ] ::1 /singcms/admin.php?c=content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001843s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 113 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 150 行.
+NOTIC: [8] Undefined variable: pageres D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 176 行.
+NOTIC: [8] Undefined variable: positions D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-05-13T15:36:35+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000857s ]
+
+[ 2017-05-13T15:39:08+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001966s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001148s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 43 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016766s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-05-13T16:49:53+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017440s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000961s ]
+
+[ 2017-05-13T16:50:07+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001259s ]
+
+[ 2017-05-13T16:50:16+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+
+[ 2017-05-13T16:50:31+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0195s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004578s ]
+
+[ 2017-05-13T16:50:44+08:00 ] ::1 /singcms/admin.php?c=content&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0723s ]
+SQL: INSERT INTO `cms_news` (`title`,`small_title`,`thumb`,`title_font_color`,`catid`,`copyfrom`,`description`,`keywords`,`create_time`,`username`) VALUES ('12313','131321','','#5674ed','3','0','1321','132','1494665443','admin') [ RunTime:0.0383s ]
+SQL: SHOW COLUMNS FROM `cms_news_content` [ RunTime:0.0586s ]
+SQL: INSERT INTO `cms_news_content` (`content`,`news_id`) VALUES ('13213213','25') [ RunTime:0.0135s ]
+
+[ 2017-05-13T16:50:45+08:00 ] ::1 /singcms/admin.php?c=content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\demo\singcms\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined index: a D:\demo\singcms\Application\Common\Common\function.php 第 44 行.
+NOTIC: [8] Undefined variable: webSiteMenu D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 113 行.
+NOTIC: [8] Undefined variable: news D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 150 行.
+NOTIC: [8] Undefined variable: pageres D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 176 行.
+NOTIC: [8] Undefined variable: positions D:\demo\singcms\Application\Runtime\Cache\Admin\ccc9ced3ad798311a07cb47b740981c5.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043023s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
